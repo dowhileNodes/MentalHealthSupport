@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MentalHealthSupport</string>
+    <array name="status">
+        <item>COVID-19 Patient</item>
+        <item>Health Professional</item>
+    </array>
+</resources>
