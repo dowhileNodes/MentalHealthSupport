@@ -88,9 +88,17 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                             startActivity(new Intent(getApplicationContext(), Homepage.class));
                         }else {
                             Toast.makeText(MainActivity.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.GONE);
                         }
                     }
                 });
+            }
+        });
+        mlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Login.class));
+                finish();
             }
         });
 
