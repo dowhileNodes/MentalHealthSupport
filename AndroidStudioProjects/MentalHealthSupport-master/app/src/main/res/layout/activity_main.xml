@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="100dp"
+       android:background="#00afb9"
+       android:gravity="center">
+
+      <ImageView
+          android:layout_width="60dp"
+          android:layout_height="60dp"
+          android:src="@drawable/initiallogo">
+      </ImageView>
+      <TextView
+          android:layout_marginTop="10dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="SIGN UP"
+          android:textSize="20sp"
+          android:textColor="#ffff"
+          android:gravity="center">
+      </TextView>
+   </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+   <LinearLayout
+       android:padding="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="15dp"
+          android:text="Name"
+          android:layout_marginTop="10dp"/>
+
+      <EditText
+          android:id="@+id/et_fullname"
+          android:layout_width="match_parent"
+          android:layout_height="51dp"
+          android:hint="Full Name"
+          android:inputType="text" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="15dp"
+          android:layout_marginTop="10dp"
+          android:text="Email" />
+
+      <EditText
+          android:id="@+id/et_email"
+          android:layout_width="match_parent"
+          android:layout_height="51dp"
+          android:hint="Email"
+          android:inputType="text"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="15dp"
+           android:layout_marginTop="10dp"
+           android:text="Password" />
+
+       <EditText
+           android:id="@+id/et_password"
+           android:layout_width="match_parent"
+           android:layout_height="51dp"
+           android:hint="Password"
+           android:inputType="textPassword"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="15dp"
+          android:layout_marginTop="10dp"
+          android:text="Status(COVID-19 Patient or Health Professional" />
+      <Spinner
+          android:id="@+id/spinnerStatus"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:entries="@array/status"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="15dp"
+          android:layout_marginTop="8dp"
+          android:text="Date Start of Isolation(For COVID-19 Patient:)" />
+
+
+       <LinearLayout
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+     <Button
+         android:id="@+id/show_calendar"
+         android:layout_height="51dp"
+         android:layout_width="wrap_content"
+         android:text="Select Date"
+         android:layout_gravity="center"/>
+
+       <TextView
+           android:id="@+id/show_date_text"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_margin="5dp"
+           android:layout_weight="1"
+           android:layout_alignParentLeft="true"/>
+       </LinearLayout>
+
+       <TextView
+          android:layout_margin="5dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="15dp"
+           android:layout_marginTop="15dp"
+          android:text="Contact Number" />
+
+      <EditText
+          android:id="@+id/et_Cnumber"
+          android:layout_width="match_parent"
+          android:layout_height="51dp"
+          android:hint="Enter your Contact Number"
+          android:inputType="number"/>
+
+       <CheckBox
+           android:id="@+id/cb_termsandcondition"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:text="I agree to the Terms of Services and Privacy Policy" />
+       <Button
+           android:id="@+id/signupbtn"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="5dp"
+           android:text="Continue"
+           android:textSize="20sp"/>
+       <TextView
+           android:id="@+id/mlogin"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Have an account? Sign In"
+           android:gravity="center"
+           android:textSize="15sp"/>
+       <ProgressBar
+           android:id="@+id/progressBar"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:visibility="invisible"/>
+
+   </LinearLayout>
+    </ScrollView>
+</LinearLayout>
